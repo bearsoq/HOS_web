@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專題網頁</title>
+	<link rel="stylesheet" href="css/text.css" type="text/css">
+    <style type="text/css">
+		.container {margin: 100px auto;}
+		.large_font {font-size: 24px;}
+		.super_large_font {font-size: 40px;}
+		.round_banner {border-radius: 20px;}
+		.round_image {border-radius: 50%;}
+
+	</style>
+
+</head>
+<body>
+
+<div id="page">
+<div id="header">
+	<table align="center">
+		<tr>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img1.png"></span>
+			</td>
+			<td height="150px" align="center">
+				<h1 id="logo"> <a href="index.html">智慧醫療麻醉深度之預測</a> </h1>
+			</td>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img2.png"></span>
+			</td>
+		</tr>
+	</table>
+	<div id="navigation">
+		<ul class="drop-down-menu">
+			<li class="large_font">
+				<a href="index.html">首頁</a>
+			</li>
+			<li class="large_font">
+				<a href="introduction.html">團隊介紹</a>
+			</li>
+			<li class="large_font">
+				<a href="motivation.html">研究動機&目的</a>
+			</li>
+			<li class="large_font">
+				<a href="description.html">背景說明</a>
+			</li>
+			<li class="large_font">
+				<a href="description1.html">資料描述</a>
+				<ul class="large_font">
+					<li><a href="model01.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model02.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model03.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model04.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li class="selected"><a href="model05.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model06.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model07.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model08.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model09.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="process.html">研究過程</a>
+					<ul class="large_font">
+						<li><a href="employ.html">使用平台與套件</a></li>
+						<li><a href="method.html">研究方法</a></li>
+						<li><a href="steps.html">研究步驟</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="results.html" class="large_font">成果解說</a>
+				<ul class="large_font">
+					<li><a href="model1.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model2.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model3.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model4.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model5.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model6.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model7.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model8.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model9.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="conclusion.html">結論</a>
+			</li>
+			<li class="large_font">
+				<a href="reference.html">參考資料</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<article>
+	<div id="body">
+	<h1>模型五-----預測下刀後10分鐘的收縮壓</h1>
+	<h1>自變數X</h1>
+	<p class="t1_font">
+		<table align="center" border="1">
+			<tr>
+				<td>
+					手術科別為泌尿科
+				</td>
+				<td>
+					進入手術室的第一次收縮壓
+				</td>
+				<td>
+					外科下刀的收縮壓
+				</td>
+			</tr>
+		</table>
+	</p>
+	
+	<h1>應變數Y</h1>
+	<p class="t1_font">
+		下刀後10分鐘的收縮壓
+	</p>
+	
+	</div>
+	
+</article>
+
+
+<footer>
+	<div id="footer">
+		<div id="Main">
+			<div class="background">
+				<div class="body">
+					<p style="text-align: center;">
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+						<span style="color: orange;font-size: 24px;"><b>資料科學</b></span>
+						<span style="color: black;font-size: 24px;">幫助人類，</span>
+						<span style="color: orange;font-size: 24px;"><b>人工智慧</b></span>
+						<span style="color: black;font-size: 24px;">創新世界</span>
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+					</p>
+					<div id="section1">
+						<table align="center" width="600px">
+							<tr>
+								<td>
+									<p>靜宜大學<br>Providence University</p>
+									<p>43301臺中市沙鹿區臺灣大道7段200號<br>
+										200, Sec. 7, Taiwan Boulevard, Shalu Dist.,<br>
+										Taichung City 43301 Taiwan
+									</p>
+								</td>
+								<td>
+									<p>靜宜大學<br>資料科學暨大數據分析與應用學系<br>PUDS</p>
+									<p>電 話：886-4 26328001<br>#15051,15052,15053<br>
+										傳 真：(04) 2631-4846<br>
+										信 箱：pu20250@pu.edu.tw
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>

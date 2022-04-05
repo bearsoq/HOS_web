@@ -8,33 +8,10 @@
 	<link rel="stylesheet" href="css/text.css" type="text/css">
     <style type="text/css">
 		.container {margin: 100px auto;}
-		.large_font {font-size: 32px;}
+		.large_font {font-size: 24px;}
 		.super_large_font {font-size: 40px;}
 		.round_banner {border-radius: 20px;}
 		.round_image {border-radius: 50%;}
-
-		.navbar {
-		  overflow: hidden;
-  		  background-color: #333;
-  		  position: relative;
-		  top: 0;
-  		  width: 100%;
-		}
-
-		.navbar a {
-		  float: left;
-  		  display: block;
-  		  color: #f2f2f2;
-  		  text-align: center;
-  		  padding: 14px 16px;
-  		  text-decoration: none;
-  		  font-size: 17px;
-		}
-
-		.navbar a:hover {
-		  background: #ddd;
- 		  color: black;
-		}
 
 	</style>
 
@@ -58,43 +35,58 @@
 	</table>
 	<div id="navigation">
 		<ul class="drop-down-menu">
-			<li>
+			<li class="large_font">
 				<a href="index.html">首頁</a>
 			</li>
-			<li>
+			<li class="large_font">
 				<a href="introduction.html">團隊介紹</a>
 			</li>
-			<li>
+			<li class="large_font">
 				<a href="motivation.html">研究動機&目的</a>
 			</li>
 			<li>
-				<a href="description.html">背景說明</a>
+				<a class="large_font" href="description.html">背景說明</a>
 			</li>
 			<li class="selected">
-				<a href="description1.html">資料描述</a>
+				<a class="large_font" href="description1.html">資料描述</a>
+				<ul class="large_font">
+					<li><a href="model01.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model02.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model03.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model04.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model05.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model06.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model07.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model08.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model09.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
 			</li>
-			<li>
+			<li class="large_font">
 				<a href="process.html">研究過程</a>
-					<ul>
+					<ul class="large_font">
 						<li><a href="employ.html">使用平台與套件</a></li>
 						<li><a href="method.html">研究方法</a></li>
 						<li><a href="steps.html">研究步驟</a></li>
 					</ul>
 			</li>
 			<li>
-				<a href="results.html">成果解說</a>
-				<ul>
+				<a href="results.html" class="large_font">成果解說</a>
+				<ul class="large_font">
 					<li><a href="model1.html">模型一-----預測半身麻醉深度</a></li>
-					<li><a href="model2.html">模型二-----預測麻醉後的血壓心跳變化</a></li>
-					<li><a href="model3.html">模型三-----預測下刀後的血壓心跳變化</a></li>
-					<li><a href="model4.html">模型四-----預測半身麻醉後是否使用升壓劑及其劑量</a></li>
-					<li><a href="model5.html">模型五-----預測半身麻醉後是否使用止痛藥及其劑量</a></li>
+					<li><a href="model2.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model3.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model4.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model5.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model6.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model7.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model8.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model9.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
 				</ul>
 			</li>
-			<li>
+			<li class="large_font">
 				<a href="conclusion.html">結論</a>
 			</li>
-			<li>
+			<li class="large_font">
 				<a href="reference.html">參考資料</a>
 			</li>
 			</ul>
@@ -102,167 +94,463 @@
 	</div>
 </div>
 
-<section align="center">
-	<div class="container" style="font-size: 30px;">
-		<a href="#001">類別變數</a>
-		<a href="#002">連續變數</a>
-		<a href="#003">自變數X與應變數Y</a>
-		<a href="#004">模型一-----預測半身麻醉深度</a>
-		<a href="#005">模型二-----預測麻醉後的血壓心跳變化</a>
-		<a href="#006">模型三-----預測下刀後的血壓心跳變化</a><br>
-		<a href="#007">模型四-----預測半身麻醉後是否使用升壓劑及其劑量</a>
-		<a href="#008">模型五-----預測半身麻醉後是否使用止痛藥及其劑量</a>
-	</div>
-</section>
 
 <article>
 <div id="body">
 <h1>變數介紹</h1>
-<h1 id="001">類別變數</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
+<h1>類別變數</h1>
+<p class="t1_font">
+	<table align="center" border="1">
+		<tr>
+			<td>
+				半身麻醉完成後之麻醉高度測量
+			</td>
+			<td>
+				手術科別 (OBS婦產科、Ortho骨科、GU泌尿科、CRS大腸直腸外科)
+			</td>
+			<td>
+				半身麻醉完成後之麻醉高度測量(第二次)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉注射部位
+			</td>
+			<td>
+				身體質量指數
+			</td>
+			<td>
+				半身麻醉完成後，是否使用止痛藥(Fentanyl, Ketamine, NSAID)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉施行醫師之年資，分四組(Above V10, V10-1, R4-3, R2-1)
+			</td>
+			<td>
+				病人麻醉風險等級(1-5)
+			</td>
+			<td>
+				半身麻醉注射針之大小
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉注射針之針面方面
+			</td>
+			<td>
+				半身麻醉完成後，是否使用升壓劑(ephedrine, Levophed, Epinephrine)
+			</td>
+			<td>
+				年齡
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉完成後，是否因心律過慢而使用藥物(atropine, robinul)
+			</td>
+			<td>
+				是否為急診手術
+			</td>
+			<td>
+				性別
+			</td>
+		</tr>
+		<tr>
+			<td>
+				術前是否高血壓病史
+			</td>
+			<td>
+				術前是否糖尿病病史
+			</td>
+			<td>
+				術前是否心律不整病史
+			</td>
+		</tr>
+		<tr>
+			<td>
+				術前是否懷孕
+			</td>
+			<td>
+				術前是否有僵直性脊椎炎
+			</td>
+			<td>
+				是否曾經接受腰椎手術
+			</td>
+		</tr>
+		<tr>
+			<td>
+				此次手術是否為痣瘡或肛門瘻管			
+			</td>
+			<td>
+				半身麻醉注射，使用Heavy或Plain marcaine			
+			</td>
+			<td>
+				此次是否為困難半身麻醉
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉完成後，是否使用propofol			
+			</td>
+			<td>
+				半身麻醉注射時之病人姿勢			
+			</td>
+			<td>
+				下刀後是否有心律不整
+			</td>
+		</tr>
+	</table>
 </p>
 </div>
 
-<h1 id="002">連續變數</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
+<h1>連續變數</h1>
+<p class="t1_font">
+	<table align="center" border="1">
+		<tr>
+			<td>
+				年紀
+			</td>
+			<td>
+				身高
+			</td>
+			<td>
+				體重
+			</td>
+		</tr>
+		<tr>
+			<td>
+				身體質量指數
+			</td>
+			<td>
+				理想體重計算
+			</td>
+			<td>
+				身體表面積
+			</td>
+		</tr>
+		<tr>
+			<td>
+				淨體重計算
+			</td>
+			<td>
+				腦脊椎液量之推測值
+			</td>
+			<td>
+				半身麻醉注射，marcaine使用劑量
+		</tr>
+		<tr>
+			<td>
+				半身麻醉注射，與marcaine混合之fentanyl劑量(若有)
+			</td>
+			<td>
+				半身麻醉完成後，使用升壓劑之總劑量
+			</td>
+			<td>
+				半身麻醉完成後，使用止痛藥之總劑量
+			</td>
+		</tr>
+		<tr>
+			<td>
+				進入手術室的第一次收縮壓
+			</td>
+			<td>
+				進入手術室的第一次舒張壓
+			</td>
+			<td>
+				完成半身麻醉5分鐘的收縮壓
+			</td>
+		</tr>
+		<tr>
+			<td>
+				完成半身麻醉5分鐘的舒張壓
+			</td>
+			<td>
+				完成半身麻醉10分鐘的收縮壓
+			</td>
+			<td>
+				完成半身麻醉10分鐘的舒張壓
+			</td>
+		</tr>
+		<tr>
+			<td>
+				進入手術室的第一次心跳數
+			</td>
+			<td>
+				完成半身麻醉5分鐘的心跳數
+			</td>
+			<td>
+				完成半身麻醉10分鐘的心跳數
+			</td>
+		</tr>
+		<tr>
+			<td>
+				進入手術室的第一次血氧指數			
+			</td>
+			<td>
+				外科下刀的收縮壓			
+			</td>
+			<td>
+				外科下刀的舒張壓
+			</td>
+		</tr>
+		<tr>
+			<td>
+				外科下刀5分鐘的收縮壓			
+			</td>
+			<td>
+				外科下刀5分鐘的舒張壓			
+			</td>
+			<td>
+				外科下刀10分鐘的收縮壓
+			</td>
+		</tr>
+		<tr>
+			<td>
+				外科下刀10分鐘的舒張壓			
+			</td>
+			<td>
+				外科下刀的心跳數			
+			</td>
+			<td>
+				外科下刀的5分鐘的心跳數
+			</td>
+		</tr>
+	</table>
 
 </p>
-</div>
 
-<h1 id="003">自變數X與應變數Y</h1>
-<h1 id="004">模型一-----預測半身麻醉深度</h1>
-<h1>自變數X</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
+<h1>自變數X與應變數Y</h1>
+<p class="t1_font">
+	<table align="center" border="1">
+		<caption>自變數X</caption>
+		<tr>
+			<td>
+				手術科別 (OBS婦產科、Ortho骨科、GU泌尿科、CRS大腸直腸外科)
+			</td>
+			<td>
+				病人麻醉風險等級(1-5)
+			</td>
+			<td>
+				年紀
+			</td>
+		</tr>
+		<tr>
+			<td>
+				身高
+			</td>
+			<td>
+				體重
+			</td>
+			<td>
+				身體質量指數
+			</td>
+		</tr>
+		<tr>
+			<td>
+				淨體重計算
+			</td>
+			<td>
+				性別
+			</td>
+			<td>
+				理想體重計算
+		</tr>
+		<tr>
+			<td>
+				身體表面積
+			</td>
+			<td>
+				淨體重計算
+			</td>
+			<td>
+				術前是否高血壓病史
+			</td>
+		</tr>
+		<tr>
+			<td>
+				術前是否糖尿病病史
+			</td>
+			<td>
+				術前是否心律不整病史
+			</td>
+			<td>
+				術前是否懷孕
+			</td>
+		</tr>
+		<tr>
+			<td>
+				術前是否有僵直性脊椎炎
+			</td>
+			<td>
+				是否曾經接受腰椎手術
+			</td>
+			<td>
+				此次手術是否為痣瘡或肛門瘻管
+			</td>
+		</tr>
+		<tr>
+			<td>
+				腦脊椎液量之推測值
+			</td>
+			<td>
+				半身麻醉注射，使用Heavy或Plain marcaine
+			</td>
+			<td>
+				半身麻醉注射，marcaine使用劑量
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉注射，與marcaine混合之fentanyl劑量(若有)
+			</td>
+			<td>
+				半身麻醉注射部位
+			</td>
+			<td>
+				半身麻醉注射針之大小
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉注射針之針面方面
+			</td>
+			<td>
+				半身麻醉注射時之病人姿勢
+			</td>
+			<td>
+				此次是否為困難半身麻醉
+			</td>
+		</tr>
+		<tr>
+			<td>
+				第二次注射半身麻醉之藥物劑量(若有)
+			</td>
+			<td>
+				半身麻醉施行醫師之年資，分四組(Above V10, V10-1, R4-3, R2-1)
+			</td>
+			<td>
+				半身麻醉完成後之麻醉高度測量
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉完成後之麻醉高度測量(第二次)
+			</td>
+			<td>
+				半身麻醉完成後，是否使用升壓劑(ephedrine, Levophed, Epinephrine)
+			</td>
+			<td>
+				半身麻醉完成後，使用升壓劑之總劑量
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉完成後，是否使用止痛藥(Fentanyl, Ketamine, NSAID)
+			</td>
+			<td>
+				半身麻醉完成後，使用止痛藥之總劑量
+			</td>
+			<td>
+				半身麻醉完成後，是否使用propofol
+			</td>
+		</tr>
+		<tr>
+			<td>
+				半身麻醉完成後，是否因心律過慢而使用藥物(atropine, robinul)
+			</td>
+		</tr>
+	</table>
 </p>
-</div>
 
-<h1>應變數Y</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
-</p>
-</div>
-
-<h1 id="005">模型二-----預測麻醉後的血壓心跳變化</h1>
-<h1>自變數X</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
-</p>
-</div>
-
-<h1>應變數Y</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
-</p>
-</div>
-
-<h1 id="006">模型三-----預測下刀後的血壓心跳變化</h1>
-<h1>自變數X</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
-</p>
-</div>
-
-<h1>應變數Y</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
-</p>
-</div>
-
-<h1 id="007">模型四-----預測半身麻醉後是否使用升壓劑及其劑量</h1>
-<h1>自變數X</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
-</p>
-</div>
-
-<h1>應變數Y</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
-</p>
-</div>
-
-<h1 id="08">模型五-----預測半身麻醉後是否使用止痛藥及其劑量</h1>
-<h1>自變數X</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
-</p>
-</div>
-
-<h1>應變數Y</h1>
-<p class="t1_font">內容
-	<br>
-	<br>
-	<br>
-
+<p class="t1_font">
+	<table align="center" border="1">
+		<caption>應變數Y</caption>
+		<tr>
+			<td>
+				進入手術室的第一次收縮壓
+			</td>
+			<td>
+				進入手術室的第一次舒張壓
+			</td>
+			<td>
+				完成半身麻醉5分鐘的收縮壓
+			</td>
+		</tr>
+		<tr>
+			<td>
+				完成半身麻醉5分鐘的舒張壓
+			</td>
+			<td>
+				完成半身麻醉10分鐘的收縮壓
+			</td>
+			<td>
+				完成半身麻醉10分鐘的舒張壓
+			</td>
+		</tr>
+		<tr>
+			<td>
+				進入手術室的第一次心跳數
+			</td>
+			<td>
+				完成半身麻醉5分鐘的心跳數
+			</td>
+			<td>
+				完成半身麻醉10分鐘的心跳數
+			</td>
+		</tr>
+		<tr>
+			<td>
+				進入手術室的第一次血氧指數
+			</td>
+			<td>
+				外科下刀的收縮壓
+			</td>
+			<td>
+				外科下刀的舒張壓
+			</td>
+		</tr>
+		<tr>
+			<td>
+				外科下刀5分鐘的收縮壓
+			<td>
+				外科下刀5分鐘的舒張壓
+			</td>
+			<td>
+				外科下刀10分鐘的收縮壓
+			</td>
+		</tr>
+		<tr>
+			<td>
+				外科下刀10分鐘的舒張壓
+			</td>
+			<td>
+				外科下刀的心跳數
+			</td>
+			<td>
+				外科下刀的5分鐘的心跳數
+		</tr>
+		<tr>
+			<td>
+				外科下刀的10分鐘的心跳數
+			</td>
+			<td>
+				外科下刀的血氧指數
+			</td>
+			<td>
+				下刀後是否有心律不整
+			</td>
+		</tr>
+	</table>
 </p>
 </div>
 
 </article>
 
 
-<div>
-    <form>
-        <a href="description.html">
-            <input type="button" value="上一頁" style="width:120px;height:40px;border:2px blue none;position: fixed;bottom: 210px;left: 0;">
-        </a>
-    </form>
-</div>
-
-<div align="center">
-    <form>
-        <a href="index.html">
-            <input type="button" value="回首頁" style="width:120px;height:40px;border:2px blue none;position: fixed;bottom: 210px;">
-        </a>
-    </form>
-</div>
-
-<div>
-<form>
-    <a href="process.html">
-        <input type="button" value="下一頁" style="width:120px;height:40px;border:2px blue none;position: fixed;bottom: 210px;right: 0;">
-    </a>
-</form>
-</div>
-
-
 <footer>
-	<div class="Main">
-		<div id="footer">
+	<div id="footer">
+		<div id="Main">
 			<div class="background">
 				<div class="body">
 					<p style="text-align: center;">
@@ -274,7 +562,7 @@
 						<span style="color: purple;font-size: 24px;">&#9734;</span>
 					</p>
 					<div id="section1">
-						<table align="center">
+						<table align="center" width="600px">
 							<tr>
 								<td>
 									<p>靜宜大學<br>Providence University</p>
