@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專題網頁</title>
+	<link rel="stylesheet" href="css/text.css" type="text/css">
+    <style type="text/css">
+		.container {margin: 100px auto;}
+		.large_font {font-size: 24px;}
+		.super_large_font {font-size: 40px;}
+		.round_banner {border-radius: 20px;}
+		.round_image {border-radius: 50%;}
+
+	</style>
+
+</head>
+<body>
+
+<div id="page">
+<div id="header">
+	<table align="center">
+		<tr>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img1.png"></span>
+			</td>
+			<td height="150px" align="center">
+				<h1 id="logo"> <a href="index.html">智慧醫療麻醉深度之預測</a> </h1>
+			</td>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img2.png"></span>
+			</td>
+		</tr>
+	</table>
+	<div id="navigation">
+		<ul class="drop-down-menu">
+			<li class="large_font">
+				<a href="index.html">首頁</a>
+			</li>
+			<li class="large_font">
+				<a href="introduction.html">團隊介紹</a>
+			</li>
+			<li class="large_font">
+				<a href="motivation.html">研究動機&目的</a>
+			</li>
+			<li class="large_font">
+				<a href="description.html">背景說明</a>
+			</li>
+			<li class="large_font">
+				<a href="description1.html">資料描述</a>
+				<ul class="large_font">
+					<li><a href="model01.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model02.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model03.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model04.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model05.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model06.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model07.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model08.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model09.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="process.html">研究過程</a>
+					<ul class="large_font">
+						<li><a href="employ.html">使用平台與套件</a></li>
+						<li><a href="method.html">研究方法</a></li>
+						<li class="selected"><a href="steps.html">研究步驟</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="results.html" class="large_font">成果解說</a>
+				<ul class="large_font">
+					<li><a href="model1.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model2.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model3.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model4.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model5.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model6.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model7.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model8.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model9.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="conclusion.html">結論</a>
+			</li>
+			<li class="large_font">
+				<a href="reference.html">參考資料</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<section align="center">
+<div class="container">
+		<a class="large_font" href="#001">資料清理與前處理</a>
+		<a class="large_font" href="#002">探索性資料分析(EDA)</a>
+		<a class="large_font" href="#003">建立交互特徵</a>
+		<a class="large_font" href="#004">篩選重要變數</a>
+		<a class="large_font" href="#005">建立模型</a>
+</div>
+</section>
+
+
+<article>
+	<div id="body">
+	<h1 id="001">資料清理與前處理</h1>
+	<p class="t1_font">
+		資料中若出現缺失值或是其他不合理的數值，會請資料提供者做資料補正。連續變數的離群值使用盒型圖確認，而缺失值部分，需要確認因為人員疏忽沒有登記到或者因為病患不需要做到那方面的檢查。分類變數方面，以次數分配表查看是否有未知的分類出現。
+	
+	</p>
+	
+	<h1 id="001">探索性資料分析(EDA)</h1>
+	<p class="t1_font">
+		探索性資料分析主要用來在正規建模或假設檢定作業之外瞭解不同資料之間的相關性，並提供對於資料集變數及其之間相互關係的進一步瞭解。它可以協助識別明顯錯誤，並且更充分地瞭解資料當中的模式、偵測離群值或極端值、尋找變數之間的關係。透過敘述統計與資料視覺化，對資料進行檢視，我們可以對資料的品質有初步的了解。利用盒鬚圖及散佈圖來檢視資料是否有遺失值或極端值?是否需要進行插補？這些極端值是否來自資料蒐集錯誤？此外，探索性資料分析尚能幫助我們從資料中看看是否存在甚麼隱含的趨勢，如某些變數間比較存在高度相關性等，對資料有了基本的認識之後，將有利於我們對資料進行清理與前處理的工作，像是重新編碼，或是透過下一階段的特徵工程方法，產生更加複雜的特徵。
+	
+	</p>
+
+	<h1 id="002">建立交互特徵</h1>
+	<p class="t1_font">
+		根據模型，先去探討特徵的合理性,然後對連續型變數進行4種特徵建構(平方、根號、指數、log)，對兩分類跟多分類做one hard encoding跟虛擬變數。最後把資料以兩分類、連續型跟多分類的方式下去做交互作用（分類變數不跟自己做交互作用）;對於「年齡」，我們並沒有照著WHO規定的方式做分群，而是將它們分成三群，個別是0～65歲為成年人；66～79歲為老年人；80歲以上為高齡。因為這筆資料年輕族群人數很少,與教授和醫師討論後我們決定只分成這三類，並將老年人以及高齡併成一個新的變數。
+		而「BMI」，我們將其分為六類。分別是18.5以下為過輕；大於等於18.5且小於24為正常範圍；大於等於24且小於27為過重；大於等於27且小於30為輕度肥胖；大於等於30且小於35為中度肥胖；大於等於35為重度肥胖。並將過輕及正常範圍合併；正常範圍及過重合併；過重及輕度肥胖合併；輕度肥胖及中度肥胖合併；中度肥胖及重度肥胖合併；過輕、正常範圍、過重及輕度肥胖合併；正常範圍、過重及輕度肥胖合併；過重、輕度肥胖及重度肥胖合併。經過上述合併後，總共會額外生成8個新變數。
+		在實務上前一類BMI誤判成後一類BMI是可以接受的，醫師認為半身麻醉的BMI可以用30作為一個切點，所以我們將過輕、正常範圍、過重及輕度肥胖併為一個新變數，我們覺得正常範圍、過重及輕度肥胖的合併跟過重、輕度肥胖及中度肥胖的合併，它們之間的誤差比較可以接受。以及「手術科別」，我們不拿它跟其他變數做交互作用。「此次是否為困難半身麻醉」，因為舊資料只有一個值所以沒有拿下去做特徵工程（沒有做特徵工程也就是說沒有做交互作用）。「半身麻醉注射部位」、「半身麻醉注射針之大小」、「半身麻醉注射針之針面方面」它們彼此不做交互作用，因為這幾個變數不會與其他變數產生交互作用，所以它們不需要與其他變數去相乘或做交集。
+	   
+	
+	</p>
+	
+	<h1 id="003">篩選重要變數</h1>
+	<p class="t1_font">
+		在建立完所有特徵之後，我們透過特徵篩選，去找出具有影響力(顯著)的變數。於是我們將資料切割成80% 訓練集跟20% 測試集，再透過Lasso 進行特徵篩選。
+
+ 使用Lasso時，會有一個參數需要去調，那就是lambda(懲罰值)。不同的lambda會產生不同的收縮效果，所以我們可以利用Cross Validation的手法，驗證在不同lambda值下模型的表現如何，然後取殘差最小的(表現最好)模型，其所對應的lambda算是比較好的值。變數挑選的話，就要觀察在最佳 lambda 下，哪些變數的係數不為0。
+
+	
+	</p>
+	
+	<h1 id="004">建立模型</h1>
+	<p class="t1_font">
+		使用Logistic模型來看多分類Y變數與自變數之間的關係，我們嘗試改程式裡面的型態，但還是不能用。Logistic模型比較適合拿來做二分類。Lightgbm模型程式方面尚須修改，需多蒐集資訊來撰寫程式。而XGboost模型以及SVM模型建立後，藉由RMSE值或是混淆矩陣查看準確度，是目前結果最佳的模型。
+	</p>
+
+
+<footer>
+	<div id="footer">
+		<div id="Main">
+			<div class="background">
+				<div class="body">
+					<p style="text-align: center;">
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+						<span style="color: orange;font-size: 24px;"><b>資料科學</b></span>
+						<span style="color: black;font-size: 24px;">幫助人類，</span>
+						<span style="color: orange;font-size: 24px;"><b>人工智慧</b></span>
+						<span style="color: black;font-size: 24px;">創新世界</span>
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+					</p>
+					<div id="section1">
+						<table align="center" width="600px">
+							<tr>
+								<td>
+									<p>靜宜大學<br>Providence University</p>
+									<p>43301臺中市沙鹿區臺灣大道7段200號<br>
+										200, Sec. 7, Taiwan Boulevard, Shalu Dist.,<br>
+										Taichung City 43301 Taiwan
+									</p>
+								</td>
+								<td>
+									<p>靜宜大學<br>資料科學暨大數據分析與應用學系<br>PUDS</p>
+									<p>電 話：886-4 26328001<br>#15051,15052,15053<br>
+										傳 真：(04) 2631-4846<br>
+										信 箱：pu20250@pu.edu.tw
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>

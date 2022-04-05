@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專題網頁</title>
+	<link rel="stylesheet" href="css/text.css" type="text/css">
+    <style type="text/css">
+		.container {margin: 100px auto;}
+		.large_font {font-size: 24px;}
+		.super_large_font {font-size: 40px;}
+		.round_banner {border-radius: 20px;}
+		.round_image {border-radius: 50%;}
+
+	</style>
+
+</head>
+<body>
+
+<div id="page">
+<div id="header">
+	<table align="center">
+		<tr>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img1.png"></span>
+			</td>
+			<td height="150px" align="center">
+				<h1 id="logo"> <a href="index.html">智慧醫療麻醉深度之預測</a> </h1>
+			</td>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img2.png"></span>
+			</td>
+		</tr>
+	</table>
+	<div id="navigation">
+		<ul class="drop-down-menu">
+			<li class="large_font">
+				<a href="index.html">首頁</a>
+			</li>
+			<li class="large_font">
+				<a href="introduction.html">團隊介紹</a>
+			</li>
+			<li class="large_font">
+				<a href="motivation.html">研究動機&目的</a>
+			</li>
+			<li class="large_font">
+				<a href="description.html">背景說明</a>
+			</li>
+			<li class="large_font">
+				<a href="description1.html">資料描述</a>
+				<ul class="large_font">
+					<li><a href="model01.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model02.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model03.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model04.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model05.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model06.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model07.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model08.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model09.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="process.html">研究過程</a>
+					<ul class="large_font">
+						<li><a href="employ.html">使用平台與套件</a></li>
+						<li><a href="method.html">研究方法</a></li>
+						<li><a href="steps.html">研究步驟</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="results.html" class="large_font">成果解說</a>
+				<ul class="large_font">
+					<li class="selected"><a href="model1.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model2.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model3.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model4.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model5.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model6.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model7.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model8.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model9.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="conclusion.html">結論</a>
+			</li>
+			<li class="large_font">
+				<a href="reference.html">參考資料</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<article>
+<div id="body">
+<h1>模型一<br>預測半身麻醉深度</h1>
+<p class="t1_font">
+	<br>
+	<B>一、預計作法</B>
+	<br>
+	本部分，對於預測變數SA_Level_1st實施LabelEncode(Above T4:0,L2-4:1,
+	T10-12:2,T12-L2:3,T4-6:4,T6-8:5,T8-10:6)，並利用分類模型來進行預測。
+	<br><br>
+	<B>二、模型建模</B>
+	<br>
+	模型部分，分別為邏輯斯迴歸、決策樹、SVM(支援向量機)、XGBoost、
+	Catboost等分類模型，利用27個特徵訓練，並於最後預測各分類麻醉深度	
+	<br><br>
+	<B>三、模型結果</B>
+	<br><br><b>(a).Support Vectors Machine,SVM</b>
+	<br><br>
+	<!-- 8*8的表格 -->
+	<!-- cellspacing：調表格邊框的粗度 -->
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		<td><p>預測</p>
+		<table cellpadding="6" cellspacing="2">
+		<td><table cellpadding="6" cellspacing="2" width="100%">
+		<td><p>真實</p>
+		</table>
+		</table>
+		</td>
+
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>T8-10</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>30</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>182</strong></p></td>
+		<td><p><strong>136</strong></p></td>
+		<td><p><strong>47</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>79</strong></p></td>
+		<td><p><strong>7</strong></p></td>
+		<td><p><strong>112</strong></p></td>
+		<td><p><strong>156</strong></p></td>
+		<td><p><strong>112</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>	
+
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		
+		<tr>
+		<td><p><strong></strong></p></td>
+		<td><p><strong>準確率(PRE)</strong></p></td>
+		<td><p><strong>召回率(REC)</strong></p></td>
+		<td><p><strong>F1-score</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>20%</strong></p></td>
+		<td><p><strong>1%</strong></p></td>
+		<td><p><strong>2%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>45%</strong></p></td>
+		<td><p><strong>62%</strong></p></td>
+		<td><p><strong>52%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>33%</strong></p></td>
+		<td><p><strong>53%</strong></p></td>
+		<td><p><strong>41%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>準確率:38.61%  差一個類別比例:41.34%
+	<br><br><b>(b).邏輯斯迴歸</b>
+	<br><br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		<td><p>預測</p>
+		<table cellpadding="6" cellspacing="2">
+		<td><table cellpadding="6" cellspacing="2" width="100%">
+		<td><p>真實</p>
+		</table>
+		</table>
+		</td>
+
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>T8-10</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>28</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>180</strong></p></td>
+		<td><p><strong>114</strong></p></td>
+		<td><p><strong>48</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>75</strong></p></td>
+		<td><p><strong>7</strong></p></td>
+		<td><p><strong>112</strong></p></td>
+		<td><p><strong>172</strong></p></td>
+		<td><p><strong>100</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>9</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>	
+
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		
+		<tr>
+		<td><p><strong></strong></p></td>
+		<td><p><strong>準確率(PRE)</strong></p></td>
+		<td><p><strong>召回率(REC)</strong></p></td>
+		<td><p><strong>F1-score</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>19%</strong></p></td>
+		<td><p><strong>3%</strong></p></td>
+		<td><p><strong>5%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>48%</strong></p></td>
+		<td><p><strong>61%</strong></p></td>
+		<td><p><strong>54%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>37%</strong></p></td>
+		<td><p><strong>59%</strong></p></td>
+		<td><p><strong>45%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>53%</strong></p></td>
+		<td><p><strong>6%</strong></p></td>
+		<td><p><strong>10%</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>準確率:41.45%  差一個類別比例:37.92%
+	
+	<br><br><b>(c).決策樹</b>
+	<br><br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		<td><p>預測</p>
+		<table cellpadding="6" cellspacing="2">
+		<td><table cellpadding="6" cellspacing="2" width="100%">
+		<td><p>真實</p>
+		</table>
+		</table>
+		</td>
+
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>T8-10</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>5</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>7</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>33</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>173</strong></p></td>
+		<td><p><strong>129</strong></p></td>
+		<td><p><strong>52</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>72</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>120</strong></p></td>
+		<td><p><strong>157</strong></p></td>
+		<td><p><strong>106</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>9</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>	
+
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		
+		<tr>
+		<td><p><strong></strong></p></td>
+		<td><p><strong>準確率(PRE)</strong></p></td>
+		<td><p><strong>召回率(REC)</strong></p></td>
+		<td><p><strong>F1-score</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>25%</strong></p></td>
+		<td><p><strong>5%</strong></p></td>
+		<td><p><strong>8%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>44%</strong></p></td>
+		<td><p><strong>59%</strong></p></td>
+		<td><p><strong>50%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>34%</strong></p></td>
+		<td><p><strong>54%</strong></p></td>
+		<td><p><strong>42%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>53%</strong></p></td>
+		<td><p><strong>6%</strong></p></td>
+		<td><p><strong>10%</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>準確率:38.15%  差一個類別比例:41.11%
+	
+	<br><br><b>(d).XGBoost,XGB</b>
+	<br><br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		<td><p>預測</p>
+		<table cellpadding="6" cellspacing="2">
+		<td><table cellpadding="6" cellspacing="2" width="100%">
+		<td><p>真實</p>
+		</table>
+		</table>
+		</td>
+
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>T8-10</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>8</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>12</strong></p></td>
+		<td><p><strong>7</strong></p></td>
+		<td><p><strong>8</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>28</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>146</strong></p></td>
+		<td><p><strong>104</strong></p></td>
+		<td><p><strong>51</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>53</strong></p></td>
+		<td><p><strong>5</strong></p></td>
+		<td><p><strong>124</strong></p></td>
+		<td><p><strong>158</strong></p></td>
+		<td><p><strong>84</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>19</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>13</strong></p></td>
+		<td><p><strong>24</strong></p></td>
+		<td><p><strong>17</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>	
+
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		
+		<tr>
+		<td><p><strong></strong></p></td>
+		<td><p><strong>準確率(PRE)</strong></p></td>
+		<td><p><strong>召回率(REC)</strong></p></td>
+		<td><p><strong>F1-score</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>21%</strong></p></td>
+		<td><p><strong>7%</strong></p></td>
+		<td><p><strong>11%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>43%</strong></p></td>
+		<td><p><strong>49%</strong></p></td>
+		<td><p><strong>46%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>37%</strong></p></td>
+		<td><p><strong>54%</strong></p></td>
+		<td><p><strong>44%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>23%</strong></p></td>
+		<td><p><strong>11%</strong></p></td>
+		<td><p><strong>14%</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>準確率:37.47%  差一個類別比例:38.95%	
+	
+	<br><br><b>(e).Catboost</b>
+	<br><br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		<td><p>預測</p>
+		<table cellpadding="6" cellspacing="2">
+		<td><table cellpadding="6" cellspacing="2" width="100%">
+		<td><p>真實</p>
+		</table>
+		</table>
+		</td>
+
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>T8-10</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>5</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>5</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>5</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>32</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>172</strong></p></td>
+		<td><p><strong>130</strong></p></td>
+		<td><p><strong>52</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>1</strong></p></td>
+		<td><p><strong>69</strong></p></td>
+		<td><p><strong>3</strong></p></td>
+		<td><p><strong>117</strong></p></td>
+		<td><p><strong>153</strong></p></td>
+		<td><p><strong>99</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>0</strong></p></td>
+		<td><p><strong>4</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>2</strong></p></td>
+		<td><p><strong>7</strong></p></td>
+		<td><p><strong>5</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>	
+
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<!-- align:表格在網頁中間 -->
+		<tbody align="center"> <!-- 表格內容置中 -->
+		
+		<tr>
+		<td><p><strong></strong></p></td>
+		<td><p><strong>準確率(PRE)</strong></p></td>
+		<td><p><strong>召回率(REC)</strong></p></td>
+		<td><p><strong>F1-score</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>Above T4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>L2-4</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T10-12</strong></p></td>
+		<td><p><strong>22%</strong></p></td>
+		<td><p><strong>5%</strong></p></td>
+		<td><p><strong>8%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T12-L2</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		<td><p><strong>0%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T4-6</strong></p></td>
+		<td><p><strong>44%</strong></p></td>
+		<td><p><strong>58%</strong></p></td>
+		<td><p><strong>50%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T6-8</strong></p></td>
+		<td><p><strong>35%</strong></p></td>
+		<td><p><strong>52%</strong></p></td>
+		<td><p><strong>42%</strong></p></td>
+		</tr>
+		
+		<tr>
+		<td><p><strong>T8-10</strong></p></td>
+		<td><p><strong>25%</strong></p></td>
+		<td><p><strong>3%</strong></p></td>
+		<td><p><strong>6%</strong></p></td>
+		</tr>
+		
+		</tbody>
+	</table>
+
+	<br>準確率:38.15%  差一個類別比例:40.77%	
+	<br>
+	<br>
+	<br>總結:
+	<br>在於各項分類模型中，對於預測T4-6、T6-8兩類別是敏感的，對於任何可能
+	<br>的類別，基本上被分類於這兩類當中，而兩類別在於各模型當中的準確率皆為
+	<br>在3成以及4成左右排迴，其中以邏輯斯迴歸模型準確率最高，差一個類別比率
+	<br>最小。
+	<br>
+	<br>
+	<br>
+	<br>
+
+</p>
+</div>
+</article>
+	
+	
+<footer>
+	<div id="footer">
+		<div id="Main">
+			<div class="background">
+				<div class="body">
+					<p style="text-align: center;">
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+						<span style="color: orange;font-size: 24px;"><b>資料科學</b></span>
+						<span style="color: black;font-size: 24px;">幫助人類，</span>
+						<span style="color: orange;font-size: 24px;"><b>人工智慧</b></span>
+						<span style="color: black;font-size: 24px;">創新世界</span>
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+					</p>
+					<div id="section1">
+						<table align="center" width="600px">
+							<tr>
+								<td>
+									<p>靜宜大學<br>Providence University</p>
+									<p>43301臺中市沙鹿區臺灣大道7段200號<br>
+										200, Sec. 7, Taiwan Boulevard, Shalu Dist.,<br>
+										Taichung City 43301 Taiwan
+									</p>
+								</td>
+								<td>
+									<p>靜宜大學<br>資料科學暨大數據分析與應用學系<br>PUDS</p>
+									<p>電 話：886-4 26328001<br>#15051,15052,15053<br>
+										傳 真：(04) 2631-4846<br>
+										信 箱：pu20250@pu.edu.tw
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
