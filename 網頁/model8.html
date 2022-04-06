@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專題網頁</title>
+	<link rel="stylesheet" href="css/text.css" type="text/css">
+    <style type="text/css">
+		.container {margin: 100px auto;}
+		.large_font {font-size: 24px;}
+		.super_large_font {font-size: 40px;}
+		.round_banner {border-radius: 20px;}
+		.round_image {border-radius: 50%;}
+
+	</style>
+
+</head>
+<body>
+
+<div id="page">
+<div id="header">
+	<table align="center">
+		<tr>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img1.png"></span>
+			</td>
+			<td height="150px" align="center">
+				<h1 id="logo"> <a href="index.html">智慧醫療麻醉深度之預測</a> </h1>
+			</td>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img2.png"></span>
+			</td>
+		</tr>
+	</table>
+	<div id="navigation">
+		<ul class="drop-down-menu">
+			<li class="large_font">
+				<a href="index.html">首頁</a>
+			</li>
+			<li class="large_font">
+				<a href="introduction.html">團隊介紹</a>
+			</li>
+			<li class="large_font">
+				<a href="motivation.html">研究動機&目的</a>
+			</li>
+			<li class="large_font">
+				<a href="description.html">背景說明</a>
+			</li>
+			<li class="large_font">
+				<a href="description1.html">資料描述</a>
+				<ul class="large_font">
+					<li><a href="model01.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model02.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model03.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model04.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model05.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model06.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model07.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model08.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model09.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="process.html">研究過程</a>
+					<ul class="large_font">
+						<li><a href="employ.html">使用平台與套件</a></li>
+						<li><a href="method.html">研究方法</a></li>
+						<li><a href="steps.html">研究步驟</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="results.html" class="large_font">成果解說</a>
+				<ul class="large_font">
+					<li><a href="model1.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model2.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model3.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model4.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model5.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model6.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model7.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li class="selected"><a href="model8.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model9.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="conclusion.html">結論</a>
+			</li>
+			<li class="large_font">
+				<a href="reference.html">參考資料</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<article>
+<div id="body">
+<h1>模型八<br>預測半身麻醉後是否使用升壓劑</h1>
+<p class="t1_font">
+	<br>
+	<br><b>特徵篩選</b>
+	<!-- &emsp; 代表全形空格 -->
+	<br>&emsp;&emsp;特徵工程結束後，我們生成20幾萬筆的變數，將這麼龐大的數據量丟入模型
+	<br>中，會消耗大量的電腦效能，而且也容易造成過度配飾的問題，因此需要透過
+	<br>特徵篩選，只留下對反應變數(dependent variable)造成顯著影響的自變數
+	<br>(independent variable)進行建模。
+	<br>
+	<br>&emsp;&emsp;我們透過Lasso Regression進行特徵篩選，總共篩選出了33個變數，根據
+	<br>篩選出來的結果我們發現「手術科別」、「身體質量指數」、「是否有懷孕」、
+	<br>「半身麻醉完成後之麻醉高度測量」、「半身麻醉注射針之針面方面」、「進
+	<br>入手術室的第一次收縮壓以及舒張壓」，以上這7個變數對此模型有一定的影響
+	<br>力，值得注意的是特徵篩選將「半身麻醉注射針之針面方面」這個變數列為重
+	<br>要因子之一。
+	<br>
+	<br><b>資料平衡</b>
+	<br>&emsp;&emsp;透過隨機抽樣將原始資料的80%作為訓練集，其餘的20%作為測試集，但是有
+	<br>使用升壓劑的人數遠少於沒有使用升壓劑的人數，此情況容易導致模型訓練或
+	<br>預測時數量多的類別容易被預測到，但我們的目的其實是希望預測到有使用升
+	<br>壓劑的人，因此在進行建模之前，我們使用R語言的SMOTE函數將數量少的類別
+	<br>採用over-sampling的概念放大，數量較多的則採用under-sampling的概念減少，
+	<br>藉此達到資料平衡的效果讓每一類的人數差距減少。
+	<br>
+	<br>&emsp;&emsp;將資料平衡後的訓練集分別使用7種演算法(XGB、SVM、Rule based、KNN、
+	<br>naive bayes、Logistic Regression、Catboost)進行建模，我們從7個模型當中
+	<br>選出3個預測結果最好的顯示如下:
+	<br>1.	支援向量機(SVM)
+	<br>2.	基於規則的系統(Rule based)
+	<br>3.	羅吉斯迴歸(Logistic Regression)
+	<br>
+	<br><b>模型結果</b>
+	<br><br>(A)Svm
+	<br>預測結果：
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>427(48.96%)</td>
+				<td>98(11.17%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>200(22.81%)</td>
+				<td>152(17.33%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:60.8% 特異度:68.1%
+	<br>
+	<br><br>(B)rule_based
+	<br>預測結果：
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>466(53.14%)</td>
+				<td>135(15.39%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>161(18.36%)</td>
+				<td>115(13.11%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:46% 特異度:74.32%
+	<br>
+	<br><br>(C)Logistic
+	<br>預測結果：
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>407(46.41%)</td>
+				<td>70(7.98%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>220(25.09%)</td>
+				<td>180(20.52%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:72% 特異度:64.91%
+	<br>
+	<br>
+	<br><b>交叉驗證</b>
+	<br>&emsp;&emsp;為了確認模型不是受到極端數據的影響，造成預測結果的精確度不佳，因此
+	<br>我們透過交叉驗證進行多次的模型訓練，藉由調整過後的模型與原先的模型相
+	<br>比差異有多少。
+	<br>
+	<br><br>(A)Svm
+	<br>預測結果(原始)：
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>427(48.96%)</td>
+				<td>98(11.17%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>200(22.81%)</td>
+				<td>152(17.33%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:60.8% 特異度:68.1%
+	<br>
+	<br>預測結果(交叉驗證後):
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>429(48.92%)</td>
+				<td>103(11.47%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>198(22.58%)</td>
+				<td>147(16.76%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:58.8% 特異度:68.42%
+	<br>
+	<br><br>(B)rule_based
+	<br>預測結果(原始)：
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>466(53.14%)</td>
+				<td>135(15.39%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>161(18.36%)</td>
+				<td>115(13.11%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:46% 特異度:74.32%
+	<br>
+	<br>預測結果(交叉驗證後):
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>373(42.53%)</td>
+				<td>71(8.1%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>254(28.96%)</td>
+				<td>179(20.41%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:71.60% 特異度:59.49%
+	<br>
+	<br><br>(C)Logistic
+	<br>預測結果(原始)：
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>407(46.41%)</td>
+				<td>70(7.98%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>220(25.09%)</td>
+				<td>180(20.52%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:72% 特異度:64.91%
+	<br>
+	<br>預測結果(交叉驗證後):
+	<br>
+	<table border="1" cellspacing="2" cellpadding="6" align="center">
+		<tbody align="center">
+			<tr>
+				<td></td>
+				<td>實際NO</td>
+				<td>實際Yes</td>
+			</tr>
+			<tr>
+				<td>預測No</td>
+				<td>409(46.64%)</td>
+				<td>69(7.87%)</td>
+			</tr>
+			<tr>
+				<td>預測Yes</td>
+				<td>218(24.86%)</td>
+				<td>181(20.64%)</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>敏感度:72.40% 特異度:65.23%
+	<br>
+	<br>
+	<br>
+	<br>
+</p>
+</div>
+</article>
+	
+	
+<footer>
+	<div id="footer">
+		<div id="Main">
+			<div class="background">
+				<div class="body">
+					<p style="text-align: center;">
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+						<span style="color: orange;font-size: 24px;"><b>資料科學</b></span>
+						<span style="color: black;font-size: 24px;">幫助人類，</span>
+						<span style="color: orange;font-size: 24px;"><b>人工智慧</b></span>
+						<span style="color: black;font-size: 24px;">創新世界</span>
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+					</p>
+					<div id="section1">
+						<table align="center" width="600px">
+							<tr>
+								<td>
+									<p>靜宜大學<br>Providence University</p>
+									<p>43301臺中市沙鹿區臺灣大道7段200號<br>
+										200, Sec. 7, Taiwan Boulevard, Shalu Dist.,<br>
+										Taichung City 43301 Taiwan
+									</p>
+								</td>
+								<td>
+									<p>靜宜大學<br>資料科學暨大數據分析與應用學系<br>PUDS</p>
+									<p>電 話：886-4 26328001<br>#15051,15052,15053<br>
+										傳 真：(04) 2631-4846<br>
+										信 箱：pu20250@pu.edu.tw
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
