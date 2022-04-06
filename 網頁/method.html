@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專題網頁</title>
+	<link rel="stylesheet" href="css/text.css" type="text/css">
+    <style type="text/css">
+		.container {margin: 100px auto;}
+		.large_font {font-size: 24px;}
+		.super_large_font {font-size: 40px;}
+		.round_banner {border-radius: 20px;}
+		.round_image {border-radius: 50%;}
+
+	</style>
+
+</head>
+<body>
+
+<div id="page">
+<div id="header">
+	<table align="center">
+		<tr>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img1.png"></span>
+			</td>
+			<td height="150px" align="center">
+				<h1 id="logo"> <a href="index.html">智慧醫療麻醉深度之預測</a> </h1>
+			</td>
+			<td height="150px"  align="right">
+				<span><img width="140px" height="140px" src="img2.png"></span>
+			</td>
+		</tr>
+	</table>
+	<div id="navigation">
+		<ul class="drop-down-menu">
+			<li class="large_font">
+				<a href="index.html">首頁</a>
+			</li>
+			<li class="large_font">
+				<a href="introduction.html">團隊介紹</a>
+			</li>
+			<li class="large_font">
+				<a href="motivation.html">研究動機&目的</a>
+			</li>
+			<li class="large_font">
+				<a href="description.html">背景說明</a>
+			</li>
+			<li class="large_font">
+				<a href="description1.html">資料描述</a>
+				<ul class="large_font">
+					<li><a href="model01.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model02.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model03.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model04.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model05.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model06.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model07.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model08.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model09.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="process.html">研究過程</a>
+					<ul class="large_font">
+						<li><a href="employ.html">使用平台與套件</a></li>
+						<li class="selected"><a href="method.html">研究方法</a></li>
+						<li><a href="steps.html">研究步驟</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="results.html" class="large_font">成果解說</a>
+				<ul class="large_font">
+					<li><a href="model1.html">模型一-----預測半身麻醉深度</a></li>
+					<li><a href="model2.html">模型二-----預測麻醉後10分鐘的收縮壓</a></li>
+					<li><a href="model3.html">模型三-----預測麻醉後10分鐘的舒張壓</a></li>
+					<li><a href="model4.html">模型四-----預測麻醉後10分鐘的心跳變化</a></li>
+					<li><a href="model5.html">模型五-----預測下刀後10分鐘的收縮壓</a></li>
+					<li><a href="model6.html">模型六-----預測下刀後10分鐘的舒張壓</a></li>
+					<li><a href="model7.html">模型七-----預測下刀後10分鐘的心跳變化</a></li>
+					<li><a href="model8.html">模型八-----預測半身麻醉後是否使用升壓劑</a></li>
+					<li><a href="model9.html">模型九-----預測半身麻醉後是否使用止痛藥</a></li>
+				</ul>
+			</li>
+			<li class="large_font">
+				<a href="conclusion.html">結論</a>
+			</li>
+			<li class="large_font">
+				<a href="reference.html">參考資料</a>
+			</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<section align="center">
+	<div class="container" style="font-size: 30px;">
+		<a href="#001">特徵工程</a>
+		<a href="#002">機器學習(Machine learning)模型訓練(Training)</a>
+		<a href="#003">初步模型評估</a>
+		<a href="#004">評估是否需要進行模型組合(Ensemble)</a>
+		<a href="#005">最終模型評估</a>
+	</div>
+</section>
+
+<article>
+<div id="body">
+<h1 id="001">特徵工程</h1>
+<p class="t1_font">
+	所謂特徵，在統計中一般稱為解釋變數，而特徵工程簡單說就是將一大堆的解釋變數做一些組合或轉換，
+	得到的新的解釋變數，，並用來建立模型，以提升模型的解釋能力。特徵工程的方法，主要包含特徵選擇(Feature Selection)和特徵建構(Feature construction)兩大部分。
+	至於特徵建構，指的是從原始數據中，手動地構建新的特徵，透過組合，切割或運算的方式來產生新的特徵，
+	對於各種我們手動或是自動產生出來的特徵，後續仍須透過各種統計或機器學習方法中的特徵選擇，提取出真正重要的特徵，用於後續的模型建立。
+
+</p>
+
+<h1 id="002">機器學習(Machine learning)模型訓練(Training)</h1>
+<p class="t1_font">
+	機器學習模型的驗證，可透過幾種不同方法來進行。我們採用的方式是切割出固定比例的訓練資料與驗證資料，透過隨機之方式，將資料切為80%與20%的資料，前者用來進行模型的訓練與驗證(model training and validation)，後者用來進行模型的測試(model testing)。
+透過前者訓練出來的模型，可以透過後者來進行驗證。在本研究中預計使用多種機器學習的演算法，以找出在這個問題上表現較佳的數種方法，再看看後續是否有進行模型組合的需要。本研究中將使用的機器學習演算法預計包括:
+
+
+</p>
+<h1>SVM(Support vector machine;支持向量機)
+</h1>
+<p class="t1_font">
+	是一種監督式機器學習的分類(classification)演算法，可廣泛地應用於統計分類以及回歸分析。在解決小樣本、非線性及高維模式識別問題中表現出許多特有的優勢，且具有較完備的統計學習理論基礎。我們希望找出一個超平面(hyperplane)，使之將原始的高維度資料中，兩個不同的集合分開。以二維平面來說，我們希望能找出一條線能夠 將兩種不同的點分開，而且我們還希望這條線距離這兩個集合的邊界越大越好。
+
+</p>
+
+<h1>XGBoost(Extreme Gradient Boosting)
+</h1>
+<p class="t1_font">
+	所謂的 Boosting 就是一種將許多弱學習器集合起來，變成一個更強大的學習器，對於最終預測結果都有更高的準確度。XGBoost (Extreme Gradient Boosting)，是一種擬合殘差的梯度下降算法 Gradient Boosted Tree (GBDT)，每一步學習是基於之前的錯誤中進步，並會保留原本的模型，並加入新的函數，作為修正上次學習的錯誤，此為集合多個弱學習器。應用方面主要解決監督式學習，可以處理分類也可以解決迴歸問題。
+
+</p>
+
+<h1>Regression(迴歸模型)
+</h1>
+<p class="t1_font">
+	這是統計領域常用的統計方法之一，可用來解決連續變項或是類別變項的預測問題，透過尋找讓mean square error(MSE)出現最小值時，其個別 feature 所需加權權重的大小的方式建立其模型，在模型建立的過程中也可以進行feature selection，只留下有用的feature來做最終模型的線性組合。
+
+</p>
+
+<h1>ANN(Artificial neural network,類神經網路)
+</h1>
+<p class="t1_font">
+	是一種模仿生物神經網路結構的機器學習模型，其組成之基本單元為神經元(Neuron)，每個神經元透過將其輸入的各個訊號強度進行線性組合加總後，最後透過一個 activation function 進行轉換後，決定是否將訊號繼續往下傳遞下去，這種模型透過組合不同數量與不同層數的神經元的方式，可用來逼近各式各樣的函數表現，近年來熱門的深度學習演算法，則是延伸自此種演算法，只是因為透過運算效能與各種特殊設計的網路結構與 activation function，讓我們對於類神經網路的求解能力獲得改善，以至於傳統我們難以運算出結果的深層類神經網路在現在不僅變得可能，而且還在許多領域得到驚人的成效。
+
+</p>
+
+<h1>LightGBM(Light Gradient Boosting Machine)
+</h1>
+<p class="t1_font">
+	它也是一種常用的機器學習演算法，訓練數據的大小並不會被内存限制。LightGBM提出的主要原因就是為了解决反覆地讀寫訓練數據所消耗大量時間的問題，其主要想法是利用決策樹為基底的弱學習器，不斷地迭代訓練並取得最佳的模型。同時該演算法進行了優化使得訓練速度變快，並且有效降被消耗的資源。但缺點就是少量的資料並不適用。LightGBM提出之前，最有名的工具就是XGBoost了，這兩種演算法都使用偷吃步的方法，也就是用最小化損失函數的梯度去建構所有的弱學習器。其中tree-based 演算法所面臨的挑戰就是如何挑選最佳的葉節點切割方式，然而LightGBM 和 XGBoost 分別使用了不同的優化技術與方法來識別最佳的分割點。由此可見，LightGBM的設計初衷就是提供一個快速高效、低內存占用、高準確度、支持並行和大規模數據處理的數據科學工具。
+</p>
+
+<h1>CatBoost
+</h1>
+<p class="t1_font">
+	是Boosting演算法的一種，是一種基於對稱決策樹（oblivious trees）為基學習器實現的引數較少、支援類別型變數和高準確性的GBDT框架，主要可以解決的問題是高效合理地處理類別型特徵，此外，還解決了梯度偏差（Gradient Bias）以及預測偏移（Prediction shift）的問題，從而降低人工調參的需要，減少overfitting的問題，進而提高演算法的準確性和泛化能力。嵌入了自動將類別型特徵處理為數值型特徵的創新演算法。首先對categorical features做一些統計，計算某個類別特徵（category）出現的頻率，之後加上超引數，生成新的數值型特徵（numerical features）。Catboost還使用了組合類別特徵，可以利用到特徵之間的聯絡，這極大的豐富了特徵維度。採用排序提升的方法對抗訓練集中的噪聲點，從而避免梯度估計的偏差，進而解決預測偏移的問題，也可以自動處理類別型的特徵、缺失值、各種數據類型，如音頻、文字、圖像等。
+
+</p>
+
+<h1 id="003">初步模型評估</h1>
+<p class="t1_font">
+	對於數值型若目標變數是連續變數(數值型) ，則可以使用Root mean squared error(RMSE)、混淆矩陣、Bland-Altman analysis等方法來評估各種不同模型表現的優劣。再透過交叉驗證的方式尋找最好的結果。
+</p>
+
+<h1 id="004">評估是否需要進行模型組合(Ensemble)</h1>
+<p class="t1_font">
+	依照個別機器學習模型表現的效能優劣，決定是否需要將幾個表現較好的模型進行線性組合，以近一步提升預測效果。
+</p>
+<h1 id="005">評估是否需要進行模型組合(Ensemble)</h1>
+<p class="t1_font">
+	將最終得到的模型組合用於測試資料中，以評估最終的模型表現效果。
+</p>
+</div>
+</article>
+
+
+<footer>
+	<div id="footer">
+		<div id="Main">
+			<div class="background">
+				<div class="body">
+					<p style="text-align: center;">
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+						<span style="color: orange;font-size: 24px;"><b>資料科學</b></span>
+						<span style="color: black;font-size: 24px;">幫助人類，</span>
+						<span style="color: orange;font-size: 24px;"><b>人工智慧</b></span>
+						<span style="color: black;font-size: 24px;">創新世界</span>
+						<span style="color: purple;font-size: 24px;">&#9734;</span>
+					</p>
+					<div id="section1">
+						<table align="center" width="600px">
+							<tr>
+								<td>
+									<p>靜宜大學<br>Providence University</p>
+									<p>43301臺中市沙鹿區臺灣大道7段200號<br>
+										200, Sec. 7, Taiwan Boulevard, Shalu Dist.,<br>
+										Taichung City 43301 Taiwan
+									</p>
+								</td>
+								<td>
+									<p>靜宜大學<br>資料科學暨大數據分析與應用學系<br>PUDS</p>
+									<p>電 話：886-4 26328001<br>#15051,15052,15053<br>
+										傳 真：(04) 2631-4846<br>
+										信 箱：pu20250@pu.edu.tw
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
